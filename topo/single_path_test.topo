@@ -1,0 +1,48 @@
+---
+ASes:
+  "1-ff00:0:100": {core: true, voting: true, authoritative: true, issuing: true}
+  "2-ff00:0:200": {core: true, voting: true, authoritative: true, issuing: true}
+  "3-ff00:0:300": {core: true, voting: true, authoritative: true, issuing: true}
+  "1-ff00:0:101": {cert_issuer: "1-ff00:0:100"}
+  "1-ff00:0:102": {cert_issuer: "1-ff00:0:100"}
+  "1-ff00:0:103": {cert_issuer: "1-ff00:0:100"}
+  "1-ff00:0:104": {cert_issuer: "1-ff00:0:100"}
+  "1-ff00:0:105": {cert_issuer: "1-ff00:0:100"}
+  "1-ff00:0:106": {cert_issuer: "1-ff00:0:100"}
+  "1-ff00:0:107": {cert_issuer: "1-ff00:0:100"}
+  "1-ff00:0:108": {cert_issuer: "1-ff00:0:100"}
+  "1-ff00:0:109": {cert_issuer: "1-ff00:0:100"}
+  "1-ff00:0:110": {cert_issuer: "1-ff00:0:100"}
+  "3-ff00:0:301": {cert_issuer: "3-ff00:0:300"}
+  "3-ff00:0:302": {cert_issuer: "3-ff00:0:300"}
+  "3-ff00:0:303": {cert_issuer: "3-ff00:0:300"}
+  "3-ff00:0:304": {cert_issuer: "3-ff00:0:300"}
+  "3-ff00:0:305": {cert_issuer: "3-ff00:0:300"}
+  "3-ff00:0:306": {cert_issuer: "3-ff00:0:300"}
+  "3-ff00:0:307": {cert_issuer: "3-ff00:0:300"}
+  "3-ff00:0:308": {cert_issuer: "3-ff00:0:300"}
+  "3-ff00:0:309": {cert_issuer: "3-ff00:0:300"}
+  "3-ff00:0:310": {cert_issuer: "3-ff00:0:300"}
+links:
+  - {a: "1-ff00:0:100", b: "2-ff00:0:200", linkAtoB: CORE}
+  - {a: "2-ff00:0:200", b: "3-ff00:0:300", linkAtoB: CORE}
+  - {a: "1-ff00:0:100", b: "1-ff00:0:101", linkAtoB: CHILD}
+  - {a: "1-ff00:0:101", b: "1-ff00:0:102", linkAtoB: CHILD}
+  - {a: "1-ff00:0:102", b: "1-ff00:0:103", linkAtoB: CHILD}
+  - {a: "1-ff00:0:103", b: "1-ff00:0:104", linkAtoB: CHILD}
+  - {a: "1-ff00:0:104", b: "1-ff00:0:105", linkAtoB: CHILD}
+  - {a: "1-ff00:0:105", b: "1-ff00:0:106", linkAtoB: CHILD}
+  - {a: "1-ff00:0:106", b: "1-ff00:0:107", linkAtoB: CHILD}
+  - {a: "1-ff00:0:107", b: "1-ff00:0:108", linkAtoB: CHILD}
+  - {a: "1-ff00:0:108", b: "1-ff00:0:109", linkAtoB: CHILD}
+  - {a: "1-ff00:0:109", b: "1-ff00:0:110", linkAtoB: CHILD}
+  - {a: "3-ff00:0:300", b: "3-ff00:0:301", linkAtoB: CHILD}
+  - {a: "3-ff00:0:301", b: "3-ff00:0:302", linkAtoB: CHILD}
+  - {a: "3-ff00:0:302", b: "3-ff00:0:303", linkAtoB: CHILD}
+  - {a: "3-ff00:0:303", b: "3-ff00:0:304", linkAtoB: CHILD}
+  - {a: "3-ff00:0:304", b: "3-ff00:0:305", linkAtoB: CHILD}
+  - {a: "3-ff00:0:305", b: "3-ff00:0:306", linkAtoB: CHILD}
+  - {a: "3-ff00:0:306", b: "3-ff00:0:307", linkAtoB: CHILD}
+  - {a: "3-ff00:0:307", b: "3-ff00:0:308", linkAtoB: CHILD}
+  - {a: "3-ff00:0:308", b: "3-ff00:0:309", linkAtoB: CHILD}
+  - {a: "3-ff00:0:309", b: "3-ff00:0:310", linkAtoB: CHILD}

@@ -1,0 +1,7 @@
+p,(!r.sub.clearance) && (r.obj.restricted), read, deny
+p,(!r.sub.clearance) && (r.obj.restricted), write, deny
+p,r.obj.owner==r.sub.id, write, allow
+p,r.obj.owner==r.sub.id, read, allow
+p,r.net.Latency>=200, write, deny
+p,r.net.TrustLevel < r.obj.TrustLevel, write, deny
+p,r.net.MTU<r.obj.size, read, deny
