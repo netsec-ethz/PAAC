@@ -335,9 +335,6 @@ func buildReverseHash(decoded *scion.Decoded) []byte {
 // Given path information of a received packet, attempts to match its dataplane path with
 // a path known to the local SCION daemon.
 // Returns an error if no such path is found.
-//
-// TODO: for efficiency, return the decoded dataplane path so that it can be used to build
-// a reply directly without having to re-decode the raw path
 func (n *SCIONNetworkAttributeHandler) GetPath(
 	dataplanePath snet.DataplanePath,
 	pktSource addr.IA,
