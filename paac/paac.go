@@ -287,8 +287,6 @@ func (e *PAACEndPoint) Close() {
 	e.Endpoint.Close()
 }
 
-// TODO: profile runtime for individual requests
-
 // struct used to represent an access control request
 // currently, attributes can only be retrieved by the endpoint
 // when evaluating the request. Sending attributes with the request packet

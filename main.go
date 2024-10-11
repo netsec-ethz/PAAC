@@ -16,7 +16,6 @@ import (
 	. "paac/paac"
 )
 
-// TODO: check CAIDA license conditions
 func main() {
 	Main()
 }
@@ -108,9 +107,9 @@ func Main() {
 
 	// here set to 1 to provide a cleaner console output
 	paacEndpoint.Start(1, 1)
-
 	// example setting to number of cores instead:
 	// paacEndpoint.Start(runtime.NumCPU(), runtime.NumCPU())
+
 	paacClient := NewPAACClient(logger, clientEndpoint)
 	defer paacClient.Close()
 
