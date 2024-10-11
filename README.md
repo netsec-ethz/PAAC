@@ -10,7 +10,7 @@ The server runs on a SCION host and waits for incoming access control requests s
 The clients each run on their own (not necessarily different) SCION hosts and send requests to the server, waiting for each reply.
 The server implementation supports any number of clients in parallel, but does not implement congestion control and request packets may be dropped as a result.
 
-## Building `PAAC`
+## Building PAAC
 Build using `go build`. 
 Requires Go 1.22.   
 See the [go.mod](go.mod) file for the full list of required packages and their versions.
@@ -42,7 +42,7 @@ To run `PAAC`, use a SCION version compatible with `https://github.com/scionprot
     * Stop `PAAC` components and exit
 
 
-## Building your own `PAAC` applications
+## Building your own PAAC applications
 This section covers a brief overview of how to use the `PAAC` proof of concept package to design a server and client. Please refer to [main.go](main.go) for a concrete example.
 ### Configuring Casbin
 As this implementation uses a Casbin enforcer to evaluate access requests, the first step is to define an appropriate Casbin model `.conf` file. 
@@ -56,7 +56,7 @@ We did not conduct extensive testing in this regard, so results may vary.
 For each request, `sub`, `obj` and `net` will be attribute maps (`map[string]any`) containing subject, object and network attributes respectively
 and `act` must be a `string` defining the desired access type.
 
-### Using the `PAAC` package
+### Using the PAAC package
 ### Creating a Server
 1. Create a `SCIONEndpoint` using `NewScionEndpoint`, with appropriate host and `sciond` 
 addresses for the server.  
@@ -140,6 +140,7 @@ but there may still be some concurrency bugs.
 
 ## Benchmarks
 The implementation includes a number of benchmarks in [paac/paac_test.go](paac/paac_test.go), which can be
-easily run using [paac/runner.sh](paac/runner.sh)(change the `scionDir` argument to match the SCION installation path). The outputs are written to [paac/results](paac/results), which already contains a set of precomputed benchmark results.
-These outputs can be parsed into LaTeX tables and visualized in plots using [results/draw_graphs.py](paac/results/draw_graphs.py) which was developed for 
+easily run using [paac/runner.sh](paac/runner.sh)(change the `scionDir` argument to match the SCION installation path). 
+The outputs are written to [paac/results](paac/bench_files/results), which already contains a set of precomputed benchmark results.
+These outputs can be parsed into LaTeX tables and visualized in plots using [results/draw_graphs.py](paac/bench_files/results/draw_graphs.py) which was developed for 
 utility during development but is unpolished/undocumented and provided as-is.
